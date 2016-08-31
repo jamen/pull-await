@@ -10,7 +10,7 @@ function await(read) {
   return function(end, cb) {
     read(end, function(end, data) {
       if (end !== null) return cb(end);
-      if (data && !data.then) return cb(null, data);
+      if (!data || !data.then) return cb(null, data);
       data.then(function(value) {
         cb(null, value);
       }, cb);

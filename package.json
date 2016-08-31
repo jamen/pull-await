@@ -20,7 +20,10 @@
     "pull"
   ],
   "devDependencies": {
+    "bluebird": "^3.4.5",
     "pull-stream": "^3.4.4",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
   }

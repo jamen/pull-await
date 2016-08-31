@@ -27,10 +27,9 @@ await(function(err, cb) {
   // Push promises to read for `await`
   cb(null, new Promise(r => setTimeout(() => r('hello'), 1000)));
   cb(null, Promise.resolve('cool'));
-  cb(null, {then: () => 'world'});
   cb(null, 'yay!');
   cb(true);
-})(function(err, data) {
+})(null, function(err, data) {
   if (err === true) return;
   if (err) throw err;
 
